@@ -1,0 +1,31 @@
+.homeWork {
+    size: small;
+    color: white;
+    padding: 12px 60px 12px 40px;
+    font-size: 1.3em;
+    position: relative;
+    border: 2px solid white;
+    width: fit-content;
+    margin: 20px 60px 60px 60px;
+    font-family: Helvetica Neue;
+    background-Color: transparent;
+  };
+
+  .Arrow {
+    position: absolute;
+    color: white;
+    font-size: 30;
+    right:25px;
+  }
+
+  .homeWork:hover{
+    background-color :#3b97c4;
+    color: white;
+  }
+
+  .homeWork:hover .Arrow {
+    transition: 0.3s;
+    transform: rotateZ(90deg);
+  }
+
+  
