@@ -1,15 +1,11 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import Background from "./assests/homeImage.jpg";
 import "typeface-roboto";
-import { Typography } from "@material-ui/core";
 import './HomePage.css';
+import Navbar from "./Navbar";
 
-// const imagePath = process.env.PUBLIC_URL;
-
-// const images = ["/assets/homeImage.jpg"];
 
 const useStyles = makeStyles(theme => ({
   titledif: {
@@ -66,9 +62,13 @@ const HomePage = props => {
           View my work
           <ArrowForwardIcon className="Arrow" style={{position: "absolute", color: "white", fontSize: "30", right:"25px" }} />
         </div>
+        
       </div>
+    <div><Navbar /> </div>
     </div>
+    
   );
+  
 };
 
 export default HomePage;
