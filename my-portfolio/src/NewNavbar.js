@@ -1,6 +1,6 @@
-import React, {Fragment } from 'react';
-import { Button, Divider} from '@material-ui/core';
-import { makeStyles} from '@material-ui/core/styles';
+import React, { Fragment } from 'react';
+import { Button, Divider } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     bottom: 'auto',
     boxShadow: '4px 4px 10px 0 rgba(0, 0, 0, 0.3)',
     textAlign: 'left',
-    transition: '1.1s',
+    transition: '0.3s',
     zIndex: 1000,
   },
   containernNav: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
   },
   wContainer: {
-    maxWidth: '1500px',
+    // maxWidth: '1500px',
     height: '100%',
     margin: '0 auto',
     '&:after': {
@@ -48,25 +48,25 @@ const useStyles = makeStyles(theme => ({
   },
 
   button: {
-    textTransform: 'none',
+    // textTransform: 'none',
     transition: '0.3s',
     fontFamily: 'Montserrat, sans-serif',
-    color:'white',
+    color: 'white',
     fontSize: '18px',
     '&:hover': {
-        color: '#6e0445',
+      color: '#6e0445',
     },
   },
   buttonBottomNav: {
-   margin: '8px 10px 0px 10px',
-   fontWeight: '500'
+    margin: '8px 10px 0px 10px',
+    //  fontWeight: '500'
   },
   buttonContainer: {
     //paddingRight: theme.spacing(1),
     height: '60px',
     float: 'left',
     //clear: 'none',
-    display: 'flex',
+    // display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -78,15 +78,15 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
- 
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'block',
-      background: 'green',
-      height: '100%',
-    },
-  },
+
+  // sectionDesktop: {
+  //   display: 'none',
+  //   [theme.breakpoints.up('md')]: {
+  //     display: 'block',
+  //     background: 'green',
+  //     height: '100%',
+  //   },
+  // },
   divider: {
     margin: theme.spacing(3, 0),
   },
@@ -96,7 +96,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  
+
 }));
 
 
@@ -108,58 +108,46 @@ const NewNavbar = props => {
         className={classes.navbar}>
         <Divider />
         <div className={classNames(classes.containerNav, classes.wContainer)}>
-          <div className={classes.navMenu}>
-            <div className={classes.sectionDesktop}>
-              <div
-                className={classNames(classes.navLogo, classes.buttonBottomNav)}
-                style={{ marginRight: '35px' }}
-              >
-              </div>
-              <div className={classes.buttonContainer}>
-                <Button
-                  className={classNames(
-                    classes.button,
-                    classes.buttonBottomNav
-                  )}
-                  component={Link}
-                  to="/"
-                >
-                  HOME
-                </Button>
-
-                <Button
-                  className={classNames(
-                    classes.button,
-                    classes.buttonBottomNav
-                  )}
-                  component={Link}
-                  to="/story"
-                >
-                 ABOUT
-                </Button>
-                <Button
-                  className={classNames(
-                    classes.button,
-                    classes.buttonBottomNav
-                  )}
-                  component={Link}
-                  to="/pricing"
-                >
-                  PROJECTS
-                </Button>
-                <Button
-                  className={classNames(
-                    classes.button,
-                    classes.buttonBottomNav
-                  )}
-                  component={Link}
-                  to="/contact/514"
-                >
-                  CONTACT
-                </Button>
-              </div>
-            </div>
+          {/* <div className={classes.navMenu}> */}
+          {/* <div className={classes.sectionDesktop}> */}
+          <div className={classNames(classes.navLogo, classes.buttonBottomNav)}>
+            {/* style={{ marginRight: '35px' }} */}
           </div>
+          <div className={classes.buttonContainer}>
+            <Button
+              className={classNames( classes.button, classes.buttonBottomNav)}
+              component={Link}
+              to="/"
+            >
+            HOME
+            </Button>
+
+            <Button
+              className={classNames( classes.button, classes.buttonBottomNav)}
+              component={Link}
+              to="/story"
+            >
+            ABOUT
+            </Button>
+            <Button
+              className={classNames( classes.button, classes.buttonBottomNav )}
+              component={Link}
+              to="/pricing"
+            >
+            PROJECTS
+            </Button>
+
+            <Button
+              className={classNames( classes.button, classes.buttonBottomNav )}
+              component={Link}
+              to="/contact/514"
+            >
+            CONTACT
+            </Button>
+
+          </div>
+          {/* </div>
+          </div> */}
         </div>
       </div>
     </Fragment>
