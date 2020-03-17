@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Background from "./assests/homeImage.jpg";
 import "typeface-roboto";
 import './HomePage.css';
-import Navbar from "./Navbar";
+import  NewNavbar from "./NewNavbar";
 
 
 const useStyles = makeStyles(theme => ({
@@ -62,9 +62,8 @@ const HomePage = props => {
           View my work
           <ArrowForwardIcon className="Arrow" style={{position: "absolute", color: "white", fontSize: "30", right:"25px" }} />
         </div>
-        
+        <div><NewNavbar /></div>
       </div>
-    <div><Navbar /> </div>
     </div>
     
   );
