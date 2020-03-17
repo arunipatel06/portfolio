@@ -1,10 +1,9 @@
 import React from "react";
+import NewNavbar from "./NewNavbar";
 
 const Contact = props => {
   return (
-    <div>
-      <h1>Contact us on {props.match.params.no}</h1>
-    </div>
+    <div><NewNavbar /></div>
   );
 };
 
