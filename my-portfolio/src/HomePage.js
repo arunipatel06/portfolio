@@ -44,7 +44,7 @@ const HomePage = props => {
   return (
     
     <div>
-      <Grid item xs={12} style={{backgroundColor: 'yellow'}}>
+      <Grid item xs={12}>
       <section className={classes.homeImage}>
       <div>
         <p className={classes.homeContent}>
@@ -59,7 +59,7 @@ const HomePage = props => {
     </section>
     </Grid>
     
-    {/* <div><NewNavbar /></div> */}
+    <div><NewNavbar /></div>
     </div>
   );
   
