@@ -7,19 +7,24 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   navbar: {
-    height: '60px',
-    position: 'fixed',
+    width: '100%',
+    height: '50px',
+    position: 'absolute',
     left: 0,
     top: 0,
     right: 0,
     bottom: 'auto',
+    borderBottom: '4px solid #04c2c9',
     boxShadow: '4px 4px 10px 0 rgba(0, 0, 0, 0.3)',
     textAlign: 'left',
-    transition: '0.3s',
-    zIndex: 1000,
+    transition: '0.5s',
+    cursor: 'pointer',
+    // border-bottom: '3px solid #04c2c9',
+    zIndex: 99,
+    
   },
   containernNav: {
-    padding: theme.spacing(1, 3),
+    // padding: theme.spacing(1, 3),
     display: 'block',
     margin: '0 auto',
     height: '100%',
@@ -33,7 +38,7 @@ const useStyles = makeStyles(theme => ({
       display: 'block',
       clear: 'both',
     },
-    backgroundColor: '#151733'
+    backgroundColor: '#1b242f'
   },
   navLogo: {
     height: '100%',
@@ -49,16 +54,17 @@ const useStyles = makeStyles(theme => ({
 
   button: {
     // textTransform: 'none',
-    transition: '0.3s',
-    fontFamily: 'Montserrat, sans-serif',
+    transition: '0.5s',
+    fontFamily: 'Raleway',
     color: 'white',
-    fontSize: '18px',
+    fontSize: '20px',
     '&:hover': {
-      color: '#6e0445',
+      color: '#e31b6d',
     },
   },
   buttonBottomNav: {
-    margin: '8px 10px 0px 10px',
+    margin: '0px 20px',
+    
     //  fontWeight: '500'
   },
   buttonContainer: {
@@ -72,7 +78,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   topNav: {
-    paddingRight: theme.spacing(1),
+    // paddingRight: theme.spacing(1),
     height: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
@@ -125,14 +131,14 @@ const NewNavbar = props => {
             <Button
               className={classNames( classes.button, classes.buttonBottomNav)}
               component={Link}
-              to="/story"
+              to="/about"
             >
             ABOUT
             </Button>
             <Button
               className={classNames( classes.button, classes.buttonBottomNav )}
               component={Link}
-              to="/pricing"
+              to="/about"
             >
             PROJECTS
             </Button>
