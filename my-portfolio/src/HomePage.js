@@ -48,9 +48,14 @@ const HomePage = props => {
       <section className={classes.homeImage}>
       <div>
         <p className={classes.homeContent}>
-          Hello I'm <span className={classes.typo}>Aruni Patel</span>.
+          Hello I'm 
+          <span className={classes.typo}>Aruni Patel</span>.
+
         </p>
-        <p className={classes.homeContent}>I'm Web Developer.</p>
+        <p className={classes.homeContent}>
+        I'm Web Developer.
+        </p>
+        
         <div className="homeWork" style={{"&:hover":{backgroundColor:"#555"}}}>
           View my work
           <ArrowForwardIcon className="Arrow" style={{position: "absolute", color: "white", fontSize: "30", right:"25px" }} />
