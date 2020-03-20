@@ -1,6 +1,5 @@
 import React from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 const BorderLinearProgress = withStyles({
@@ -24,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 
   aboutheader: {
     paddingBottom: "9px",
-    margin: "40px 0px 20px",
+    margin: "40px 40px 20px 40px",
     borderBottom: "1px solid rgba(0, 0, 0, 0.25)",
     textTransform: "uppercase",
     fontSize: "18px",
@@ -33,10 +32,11 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "1.1",
     color: "Black",
     // margin: "auto",
-    textAlign: "center"
+    textAlign: "left"
   },
+
   section4: {
-    padding: "0px 10px"
+    padding: "0px 40px"
   },
   progresslist: {
     margin: "20px 0px"
@@ -47,10 +47,12 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
     fontStyle: "normal",
     color: "white",
-    margin: "0px 0px -1px",
-    padding: "10px 15px",
+    margin: "0px 0px 0px -1px",
+    padding: "10px 60px 10px 0px",
     backgroundColor: "#7FB0A6"
-  }
+  },
+  
+
 }));
 
 export default function Contact() {
@@ -58,12 +60,6 @@ export default function Contact() {
 
   return (
     <div className={classes.root}>
-      <Grid container>
-        <Grid item xs={8} style={{ backgroundColor: "red" }}>
-        <h4 className={classes.aboutheader}>Skills Distribution</h4>
-        </Grid>
-        <Grid item xs={4}>
-          <h4 className={classes.aboutheader}>Skills</h4>
           <div className={classes.progresslist}>
             <div className={classes.progressclass}>
               <div>1</div>
@@ -81,7 +77,7 @@ export default function Contact() {
                 className={classes.margin}
                 variant="determinate"
                 color="secondary"
-                value={50}
+                value={20}
               />
             </div>
 
@@ -91,7 +87,7 @@ export default function Contact() {
                 className={classes.margin}
                 variant="determinate"
                 color="secondary"
-                value={50}
+                value={30}
               />
             </div>
 
@@ -101,7 +97,7 @@ export default function Contact() {
                 className={classes.margin}
                 variant="determinate"
                 color="secondary"
-                value={50}
+                value={90}
               />
             </div>
 
@@ -111,12 +107,10 @@ export default function Contact() {
                 className={classes.margin}
                 variant="determinate"
                 color="secondary"
-                value={50}
+                value={70}
               />
             </div>
           </div>
-        </Grid>
-      </Grid>
     </div>
   );
 }
