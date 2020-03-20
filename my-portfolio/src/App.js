@@ -11,6 +11,7 @@ import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Progressbar from "./Progressbar";
 import PieChart from "./PieChart";
+import Skills from "./Skills";
 class App extends Component {
 
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
                 <Route path="/contact/:no" component={Contact} />
                 <Route path="/progressbar" component={Progressbar} />
                 <Route path="/piechart" component={PieChart} />
+                <Route path="/skills" component={Skills}/>
 
               </Switch>
           </BrowserRouter>
