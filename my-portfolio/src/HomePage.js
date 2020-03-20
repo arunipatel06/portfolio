@@ -5,7 +5,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Background from "./assests/homeImage.jpg";
 import "typeface-roboto";
 import './HomePage.css';
-import  NewNavbar from "./NewNavbar";
+import Skills from "./Skills";
 
 
 const useStyles = makeStyles(theme => ({
@@ -64,7 +64,8 @@ const HomePage = props => {
     </section>
     </Grid>
     
-    <div><NewNavbar /></div>
+    {/* <div><NewNavbar /></div> */}
+    <div><Skills /></div>
     </div>
   );
   
