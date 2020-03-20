@@ -68,8 +68,8 @@ const NewNavbar = props => {
               HOME
             </Button>
 
-            <Button className={classes.button} component={Link} to="/about">
-              ABOUT
+            <Button className={classes.button} component={Link} to="/skills">
+              Skills
             </Button>
 
             <Button className={classes.button} component={Link} to="/about">
