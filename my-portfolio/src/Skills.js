@@ -3,6 +3,7 @@ import PieChart from './PieChart';
 import Progressbar from './Progressbar';
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
+import NewNavbar from "./NewNavbar";
 
 const useStyles = makeStyles(theme => ({
 
@@ -20,7 +21,7 @@ const useStyles = makeStyles(theme => ({
         alignItems: "center",
         flexDirection: "column",
         color: 'white',
-        padding:'10px 20px',
+        padding:'35px 20px',
         
       },
 
@@ -32,7 +33,7 @@ const useStyles = makeStyles(theme => ({
          fontSize: '20px',
          padding: '20px 0px 10px 0px',
          margin: '0px 60px 40px 10px',
-         fontStyle: 'bold'
+         fontWeight:'bold',
       },
 }));
 
@@ -42,8 +43,9 @@ const Skills = props =>{
 
     return (
       <div >
+        <div><NewNavbar /></div>
         <section className={classes.skills}>
-            <div className={classes.skills}>Skills</div>
+          <div className={classes.skills}>Skills</div>
           <Grid container spacing={4}>
             <Grid item xs={8}>
               <h4 className={classes.charts}>Skills Distribution</h4>
