@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Button} from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     right: 0,
     borderBottom: "4px solid #04c2c9",
-    boxShadow: '4px 4px 10px 0 rgba(0, 0, 0, 0.3)',
+    boxShadow: "4px 4px 10px 0 rgba(0, 0, 0, 0.3)",
     textAlign: "left",
     transition: "0.5s",
     cursor: "pointer",
@@ -60,11 +60,14 @@ const NewNavbar = props => {
   return (
     <Fragment>
       <div className={classes.navbar}>
-
         <div className={classes.wContainer}>
           <div className={classes.buttonContainer}>
-
-            <Button className={classes.button} style={{marginLeft: '80px'}} component={Link} to="/">
+            <Button
+              className={classes.button}
+              style={{ marginLeft: "80px" }}
+              component={Link}
+              to="/"
+            >
               HOME
             </Button>
 
@@ -76,11 +79,9 @@ const NewNavbar = props => {
               PROJECTS
             </Button>
 
-            <Button
-              className={classes.button} component={Link} to="/contact/514">
+            <Button className={classes.button} component={Link} to="/contact">
               CONTACT
             </Button>
-
           </div>
         </div>
       </div>
