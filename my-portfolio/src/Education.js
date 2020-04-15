@@ -1,25 +1,23 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Divider, Typography , Card, CardContent} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import NewNavbar from "./NewNavbar";
 import LensRoundedIcon from "@material-ui/icons/LensRounded";
-import SimpleCard from "./education/Card";
 
 const usestyles = makeStyles(theme => ({
   page: {
     height: "100vh",
-    width: "100%",
+    // width: "100%",
     backgroundColor: "white",
     padding: "35px 20px"
   },
   title: {
-    textAlign: "left",
+    textAlign: "center",
     fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
     textTransform: "uppercase",
-    fontSize: "30px",
-    fontWeight: "bold",
+    fontSize: "35px",
+    fontWeight: 600,
     color: "grey",
-    margin: "45px 10px"
+    margin: "80px 0px 25px 0px",
   },
   border: {
     borderLeft: "5px solid #fcc93a",
@@ -28,35 +26,29 @@ const usestyles = makeStyles(theme => ({
     // padding:"30px"
   },
   icons: {
-    position: "absolute",
-    display: "flex",
-    justify: "flex-end",
+    // position: "absolute",
     color: "#fcc93a",
-    fontSize: "30px",
-    margin: "0px 0px 40px 0px"
+    fontSize: "25px",
+    // margin: "0px 0px 40px 0px"
     // border: "3px solid grey",
     // borderRadius: "50%"
 
   },
-  container: {
-    width: "fit-content",
-    position: "relative",
-    margin: "40px 0px 0px 0px"
-
+  bullets: {
+    display:"flex",
+    flexDirection:"row",
+    justifyContent:"left",
+    alignItems:"center"
   },
 
   contentContainer: {
-    // border:"3px solid Grey",
-    margin: "30px 0px 0px 0px"
+    paddingBottom:"25px"
   },
   heading: {
-    textAlign: "left",
+    textAlign: "center",
     fontSize: "20px",
-    margin: "0px 0px 0px 35px",
     fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    borderBottom: "3px solid #fcc93a",
-    width:"200px",
-    padding:"0px 60px 10px 60px "
+    overflow:"hidden"
   },
   year: {
     fontFamily: "Helvetica Neue Helvetica Arial",
@@ -70,49 +62,93 @@ const usestyles = makeStyles(theme => ({
     margin: "10px 0px 10px 15px",
     fontSize: "15px",
     fontFamily: "sans-serif"
-  }
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  cardTitle: {
+    fontSize: "18px",
+  },
+  pos: {
+    marginBottom: 12,
+  },
 }));
 const Education = props => {
   const classes = usestyles();
 
+
+  const masterEducation = (
+    <Card className={classes.root}>
+      <CardContent>
+        <Typography>
+          Concordia University
+        </Typography>
+        <Typography  className={classes.cardTitle} color="textSecondary" gutterBottom>
+            Masters In Software Engineering
+        </Typography>
+
+        {/* <Typography className={classes.pos} variant="body2" component="p" color="textSecondary">
+          Major Courses: Sofware Design Methodologies, Software Architecture
+        </Typography> */}
+      </CardContent>
+    </Card>
+  );
+
+  const BachelorEducation = (
+    <Card className={classes.root}>
+      <CardContent>
+        <Typography>
+          Gujarat Technological University
+        </Typography>
+        <Typography  className={classes.cardTitle} color="textSecondary" gutterBottom>
+            Bachelors in Computer Engineering
+        </Typography>
+
+        {/* <Typography className={classes.pos} variant="body2" component="p" color="textSecondary">
+        </Typography> */}
+      </CardContent>
+    </Card>
+  );
+
+
+
   return (
-    <div>
-      <div>
-        <NewNavbar />
-      </div>
-      <section className={classes.page}>
-        <h1 className={classes.title}>Education</h1>
-        <Grid container>
+    <div style={{overflow:'hidden' ,maxWidth:'70%'}} >
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+          <Typography className={classes.title}>Education</Typography>
+          </Grid>
+          
           <Grid item xs={3}>
-            <div className={classes.container}>
+            <div className={classes.heading}>Masters </div>
+            <div className={classes.bullets}>
               <LensRoundedIcon className={classes.icons} />
-              <span className={classes.heading}>Masters</span>
+              <Divider style={{height:"3px", width:"180px",  backgroundColor: "#fcc93a",}}/>
             </div>
           </Grid>
 
           <Grid item xs={9}>
             <div className={classes.contentContainer}>
-              <SimpleCard />
+              {masterEducation}
             </div>
-            <div className={classes.contentContainer}></div>
           </Grid>
 
           <Grid item xs={3}>
-            <div className={classes.container}>
+            <div className={classes.heading}>Bachelors </div>
+            <div className={classes.bullets}>
               <LensRoundedIcon className={classes.icons} />
-              <span className={classes.heading}>Bachelors</span>
+              <Divider style={{height:"3px", width:"180px",  backgroundColor: "#fcc93a",}}/>
             </div>
           </Grid>
 
           <Grid item xs={9}>
             <div className={classes.contentContainer}>
-              <SimpleCard />
-            </div>
-            <div className={classes.contentContainer}>
+              {BachelorEducation}
             </div>
           </Grid>
         </Grid>
-      </section>
     </div>
   );
 };
