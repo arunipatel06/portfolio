@@ -10,6 +10,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Skills from "./Skills";
+import Education from "./Education";
 class App extends Component {
 
   render() {
@@ -19,11 +20,9 @@ class App extends Component {
           <BrowserRouter>
               <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/contact/:no" component={Contact} />
-                {/* <Route path="/progressbar" component={Progressbar} />
-                <Route path="/piechart" component={PieChart} /> */}
+                <Route exact path="/contact" component={Contact} />
                 <Route exact path="/skills" component={Skills}/>
-
+                <Route exact path="/education" component={Education}/>
               </Switch>
           </BrowserRouter>
         </div>
