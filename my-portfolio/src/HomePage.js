@@ -6,6 +6,8 @@ import Background from "./assests/homeImage.jpg";
 import "typeface-roboto";
 import './HomePage.css';
 import Skills from "./Skills";
+import Contact from "./Contact";
+import Education from "./Education";
 
 
 const useStyles = makeStyles(theme => ({
@@ -66,6 +68,8 @@ const HomePage = props => {
     
     {/* <div><NewNavbar /></div> */}
     <div><Skills /></div>
+    <div style={{display:'flex', justifyContent:"center", height:'100vh', backgroundColor:"#f7d377"}}><Education /></div>
+    <div><Contact /></div>
     </div>
   );
   
