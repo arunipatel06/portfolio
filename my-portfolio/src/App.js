@@ -11,6 +11,7 @@ import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Skills from "./Skills";
 import Education from "./Education";
+import EducationTimeline from "./EducationTimeline";
 class App extends Component {
 
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/skills" component={Skills}/>
                 <Route exact path="/education" component={Education}/>
+                <Route exact path="/educationtimeline" component={EducationTimeline}/>
               </Switch>
           </BrowserRouter>
         </div>
