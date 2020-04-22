@@ -2,7 +2,7 @@
     size: small;
     color: white;
     padding: 12px 60px 12px 40px;
-    font-size: 1.3em;
+    font-size: 25px;
     position: relative;
     border: 2px solid white;
     width: fit-content;
@@ -14,12 +14,12 @@
   .Arrow {
     position: absolute;
     color: white;
-    font-size: 30;
+    font-size:30 ;
     right:25px;
   }
 
   .homeWork:hover{
-    background-color :#3b97c4;
+    background-color :#72a293;
     color: white;
   }
 
