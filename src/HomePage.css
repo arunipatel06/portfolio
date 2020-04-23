@@ -1,31 +1,31 @@
 .homeWork {
-    size: small;
-    color: white;
-    padding: 12px 60px 12px 40px;
-    font-size: 25px;
-    position: relative;
-    border: 2px solid white;
-    width: fit-content;
-    margin: 20px 60px 60px 60px;
-    font-family: Helvetica Neue;
-    background-Color: transparent;
-  };
+  size: small;
+  color: white;
+  padding: 7px 60px 7px 40px;
+  font-size: 18px;
+  position: relative;
+  border: 2px solid white;
+  width: fit-content;
+  margin: 20px 60px 60px 60px;
+  font-family: Helvetica Neue;
+  background-color: transparent;
+}
 
-  .Arrow {
-    position: absolute;
-    color: white;
-    font-size:30 ;
-    right:25px;
-  }
+.Arrow {
+  position: absolute;
+  color: white;
+  font-size: 20;
+  right: 35px;
+  top: 8px;
+}
 
-  .homeWork:hover{
-    background-color :#72a293;
-    color: white;
-  }
+.homeWork:hover {
+  background-color: #f6c879;
+  color: #4f4f4f;
+}
 
-  .homeWork:hover .Arrow {
-    transition: 0.3s;
-    transform: rotateZ(90deg);
-  }
-
-  
+.homeWork:hover .Arrow {
+  transition: 0.3s;
+  transform: rotateZ(90deg);
+  color: #4f4f4f;
+}
