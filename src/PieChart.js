@@ -4,84 +4,94 @@ import {Doughnut} from 'react-chartjs-2';
 const data = {
  
 	labels: [
+		'Material-Ui',
 		'HTML',
-    'CSS',
-    'React',
-    'Material-Ui',
-    'MySQL',
-    'MongoDB',
-    'AWS',
-    'Firebase',
-    'NoSQL',
-    'C++',
-    'JavaScript',
-    'TypeScript',
-    'GitHub',
-    'Circle Ci',
+		'NodeJS',
+		'GitHub',
+
+		'AWS',
+		'Firebase',
+		'VScode',
+		'NoSQL',
+
+		'Redux',
+		'BigQuery',
+		'CSS',
+		'Circle Ci',
+
+		'GRASP',
+		'Python',
 	],
 	datasets: [
 		{
-		  data: [120, 80, 20, 80, 60, 20, 30, 120, 70, 50, 80, 120, 80, 50, 20],
+		  data: [80, 120, 80, 60, 20, 30, 120, 70, 30, 80, 120, 20, 50, 20],
 		  backgroundColor: [
-			'#deebff',
-			'#afceff',
-			'#7eb0ff',
-			'#679bed',
-			'#d3f0f0',
-			'#a3ddde',
-			'#5bbebf',
-			'#2da5a6',
-			'#078a8b',
-			'#eaeaea',
-			'#cccccc',
-			'#a8a8a8',
-			'#f5cab7',
-			'#ec9b78',
-			'#e47646',
+			'#d4f0ed',
+			'#77d1c7',
+			'#37bbad',
+			'#138e81',
+			'#0e655b',
+
+			'#eeeab7',
+			'#e0db95',
+			'#beb97e',
+			'#a29d6b',
+
+			'#fccebd',
+			'#faa181',
+			'#f87445',
+
+			'#ada9b8',
+			'#827c92',
+			'#5d5572',
 		  ],
 		  hoverBackgroundColor: [
 			'#324b72',
 			'#324b72',
 			'#324b72',
 			'#324b72',
-			'#005454',
-			'#005454',
-			'#005454',
-			'#005454',
-			'#005454',
+			'#324b72',
 			'#4a4a4a',
 			'#4a4a4a',
 			'#4a4a4a',
-			'#7c3618',
-			'#7c3618',
-			'#7c3618',
+			'#4a4a4a',
+			'#005454',
+			'#005454',
+			'#005454',
+			'#f70046',
+			'#f70046',
+			'#f70046',
 		  ],
 		  labels: [
-			'HTML',
-			'CSS',
-			'React',
 			'Material-Ui',
-			'MySQL',
-			'MongoDB',
+			'HTML',
+			'NodeJS',
+			'GitHub',
+
 			'AWS',
 			'Firebase',
-			'NoSQL',
-			'C++',
-			'JavaScript',
-			'TypeScript',
-			'GitHub',
 			'VScode',
+			'NoSQL',
+
+			'Redux',
+			'BigQuery',
+			'CSS',
 			'Circle Ci',
+
+			'GRASP',
+			'Python',
+
+			
 		  ],
 		  label: 'Outer',
 		},
-		{
-      data: [300, 300, 250, 150],
-      backgroundColor: ['#5b8ad2', '#007273', '#818181', '#cb5927'],
-      hoverBackgroundColor: ['#5b8ad2', '#007273', '#818181', '#cb5927'],
-      labels: ['Frontend Tech', 'Database', 'Languages', 'Development tools'],
-      label: 'Inner',
-    },
+	// 	{
+    //   data: [300, 300, 250, 150],
+    //   backgroundColor: ['#5b8ad2', '#007273', '#818181', '#cb5927'],
+    //   hoverBackgroundColor: ['#5b8ad2', '#007273', '#818181', '#cb5927'],
+    //   labels: ['Frontend Tech', 'Database', 'Languages', 'Development tools'],
+    //   label: 'Inner',
+    // },
   ],
 };
 
@@ -115,7 +125,7 @@ class PieChart extends React.Component{
   render() {
     return (
       <div>
-        <Doughnut data={data} options={options} />
+        <Doughnut data={data} options={options} width={150}/>
       </div>
     );
   }

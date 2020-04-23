@@ -1,39 +1,67 @@
 import React from "react";
-import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
+import {makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import {Typography} from "@material-ui/core";
 
-const BorderLinearProgress = withStyles({
+const Bar1 = withStyles({
   root: {
-    height: 20,
-    backgroundColor: lighten("#007f79", 0.5)
+    height: 10,
+    backgroundColor: '#77d1c7',
   },
   bar: {
-    borderRadius: 20,
-    backgroundColor: "#007f79"
+    borderRadius: 25,
+    backgroundColor: '#0e655b',
+  }
+})(LinearProgress);
+
+const Bar2 = withStyles({
+  root: {
+    height: 10,
+    backgroundColor: '#eeeab7',
+  },
+  bar: {
+    borderRadius: 25,
+    backgroundColor: '#a29d6b',
+  }
+})(LinearProgress);
+
+const Bar3 = withStyles({
+  root: {
+    height: 10,
+    backgroundColor: '#bac4b9',
+  },
+  bar: {
+    borderRadius: 25,
+    backgroundColor: '#868c85',
+  }
+})(LinearProgress);
+
+const Bar4 = withStyles({
+  root: {
+    height: 10,
+    backgroundColor: '#fccebd',
+  },
+  bar: {
+    borderRadius: 25,
+    backgroundColor: '#f87445',
+  }
+})(LinearProgress);
+
+const Bar5 = withStyles({
+  root: {
+    height: 10,
+    backgroundColor: '#ada9b8',
+  },
+  bar: {
+    borderRadius: 25,
+    backgroundColor: '#5d5572',
   }
 })(LinearProgress);
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
+
   margin: {
     margin: theme.spacing(1)
-  },
-
-  aboutheader: {
-    paddingBottom: "9px",
-    margin: "40px 40px 20px 40px",
-    borderBottom: "1px solid rgba(0, 0, 0, 0.25)",
-    textTransform: "uppercase",
-    fontSize: "18px",
-    fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    fontStyle: "normal",
-    lineHeight: "1.1",
-    color: "Black",
-    // margin: "auto",
-    textAlign: "left"
   },
 
   section4: {
@@ -44,77 +72,70 @@ const useStyles = makeStyles(theme => ({
   },
 
   progressclass: {
-    fontSize: "14px",
-    fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    fontStyle: "normal",
-    color: "white",
-    margin: "0px 0px 0px -1px",
-    padding: "10px 60px 10px 0px",
-    backgroundColor: "white"
+    paddingTop:"10px",
+    backgroundColor: "white",
+    width:"70%"
   },
   text:{
+    fontFamily: '"Manrope", sans-serif',
+    fontSize:"14px",
+    fontWeight:500,
     textAlign:"left",
     paddingLeft:"10px",
-    fontSize:"15px",
-    textTransform:"bold",
     color:"black"
   }
 
 }));
 
-export default function Contact() {
+export default function Progressbar() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
           <div className={classes.progresslist}>
-            <div className={classes.progressclass}>
-              <Typography className={classes.text}> HTML </Typography>
-              <BorderLinearProgress
+            <div className={classes.progressclass} >
+              <Typography className={classes.text}> Java </Typography>
+              <Bar1
                 className={classes.margin}
                 variant="determinate"
-                color="primary"
                 value={80}
+                
               />
             </div>
 
             <div className={classes.progressclass}>
-            <Typography className={classes.text}> CSS </Typography>
-              <BorderLinearProgress
+            <Typography className={classes.text}> JavaScript </Typography>
+              <Bar2
                 className={classes.margin}
                 variant="determinate"
-                color="secondary"
+                value={70}
+              />
+            </div>
+
+            <div className={classes.progressclass}>
+            <Typography className={classes.text}> Data Structures </Typography>
+              <Bar3
+                className={classes.margin}
+                variant="determinate"
+                value={60}
+              />
+            </div>
+
+            <div className={classes.progressclass}>
+            <Typography className={classes.text}> MYSQL </Typography>
+              <Bar4
+                className={classes.margin}
+                variant="determinate"
                 value={80}
               />
             </div>
 
             <div className={classes.progressclass}>
             <Typography className={classes.text}> React </Typography>
-              <BorderLinearProgress
+              <Bar5
                 className={classes.margin}
                 variant="determinate"
-                color="secondary"
                 value={60}
-              />
-            </div>
-
-            <div className={classes.progressclass}>
-            <Typography className={classes.text}> Java </Typography>
-              <BorderLinearProgress
-                className={classes.margin}
-                variant="determinate"
-                color="secondary"
-                value={90}
-              />
-            </div>
-
-            <div className={classes.progressclass}>
-            <Typography className={classes.text}> JavaScript </Typography>
-              <BorderLinearProgress
-                className={classes.margin}
-                variant="determinate"
-                color="secondary"
-                value={70}
               />
             </div>
           </div>

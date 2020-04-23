@@ -1,64 +1,56 @@
-import React from 'react';
-import PieChart from './PieChart';
-import Progressbar from './Progressbar';
-import {Grid} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
+import React from "react";
+import PieChart from "./PieChart";
+import Progressbar from "./Progressbar";
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import NewNavbar from "./NewNavbar";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 
-    skills: {
-        height: "100vh",
-        width: '100%',
-        textAlign: "center",
-        fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-        textTransform: 'uppercase',
-        fontSize: '40px',
-        backgroundColor: "white",
-        backgroundRepeat: "repeat",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
-        color: 'white',
-        padding:'35px 20px',
-        
-      },
+  skills: {
+    height: "100vh",
+    width: "100%",
+    padding: "35px 20px",
+    marginBottom: "100px",
+    textAlign:"center"
+  },
 
-      charts: {
-         borderBottom: "4px solid rgba(0, 0, 0, 0.25)",
-         color: 'black',
-         textAlign:'center',
-         fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-         fontSize: '20px',
-         padding: '20px 0px 10px 0px',
-         margin: '0px 60px 40px 10px',
-         fontWeight:'bold',
-      },
+  header:{
+    color: "black",
+    fontWeight: 600,
+    fontFamily: '"Manrope", sans-serif',
+    fontSize: "50px",
+    lineHeight: "30px",
+    justifyContent: "center",
+    margin: "80px 40px", 
+    
+  }
+
 }));
 
+const Skills = (props) => {
+  const classes = useStyles();
 
-const Skills = props =>{
-    const classes = useStyles();
-
-    return (
-      <div >
-        <div><NewNavbar /></div>
-        <section className={classes.skills}>
-          {/* <div className={classes.skills}>Skills</div> */}
-          <Grid container spacing={4}>
-            <Grid item xs={8}>
-              <h4 className={classes.charts}>Skills Distribution</h4>
-              <PieChart />
-            </Grid>
-            <Grid item xs={4}>
-              <h4 className={classes.charts}>Focus</h4>
-                <Progressbar />
-            </Grid>
-          </Grid>
-        </section>
+  return (
+    <div>
+      <div>
+        <NewNavbar />
       </div>
-    );
+      <section className={classes.skills}>
+        <div className={classes.header}>Skills</div>
+        <Grid container>
+          <Grid item xs={12} md={6} style={{ padding: "0px 50px 0px 100px" }}>
+            <div style={{ maxWidth: "500px" }}>
+              <PieChart />
+            </div>
+          </Grid>
+          <Grid item xs={12} md={6} style={{ padding: "17px 100px 0px 50px" }}>
+            <Progressbar />
+          </Grid>
+        </Grid>
+      </section>
+    </div>
+  );
 };
 
 export default Skills;
