@@ -14,12 +14,12 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
         textTransform: 'uppercase',
         fontSize: '40px',
-        backgroundColor: "#7FB0A6",
+        backgroundColor: "white",
         backgroundRepeat: "repeat",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
+        flexDirection: "row",
         color: 'white',
         padding:'35px 20px',
         
@@ -27,8 +27,8 @@ const useStyles = makeStyles(theme => ({
 
       charts: {
          borderBottom: "4px solid rgba(0, 0, 0, 0.25)",
-         color: 'white',
-         textAlign:'left',
+         color: 'black',
+         textAlign:'center',
          fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
          fontSize: '20px',
          padding: '20px 0px 10px 0px',
@@ -45,7 +45,7 @@ const Skills = props =>{
       <div >
         <div><NewNavbar /></div>
         <section className={classes.skills}>
-          <div className={classes.skills}>Skills</div>
+          {/* <div className={classes.skills}>Skills</div> */}
           <Grid container spacing={4}>
             <Grid item xs={8}>
               <h4 className={classes.charts}>Skills Distribution</h4>

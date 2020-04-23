@@ -1,6 +1,7 @@
 import React from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import {Typography} from "@material-ui/core";
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -49,9 +50,15 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     margin: "0px 0px 0px -1px",
     padding: "10px 60px 10px 0px",
-    backgroundColor: "#7FB0A6"
+    backgroundColor: "white"
   },
-  
+  text:{
+    textAlign:"left",
+    paddingLeft:"10px",
+    fontSize:"15px",
+    textTransform:"bold",
+    color:"black"
+  }
 
 }));
 
@@ -62,37 +69,37 @@ export default function Contact() {
     <div className={classes.root}>
           <div className={classes.progresslist}>
             <div className={classes.progressclass}>
-              <div>1</div>
+              <Typography className={classes.text}> HTML </Typography>
               <BorderLinearProgress
                 className={classes.margin}
                 variant="determinate"
-                color="secondary"
-                value={50}
+                color="primary"
+                value={80}
               />
             </div>
 
             <div className={classes.progressclass}>
-              <div>2</div>
+            <Typography className={classes.text}> CSS </Typography>
               <BorderLinearProgress
                 className={classes.margin}
                 variant="determinate"
                 color="secondary"
-                value={20}
+                value={80}
               />
             </div>
 
             <div className={classes.progressclass}>
-              <div>3</div>
+            <Typography className={classes.text}> React </Typography>
               <BorderLinearProgress
                 className={classes.margin}
                 variant="determinate"
                 color="secondary"
-                value={30}
+                value={60}
               />
             </div>
 
             <div className={classes.progressclass}>
-              <div>4</div>
+            <Typography className={classes.text}> Java </Typography>
               <BorderLinearProgress
                 className={classes.margin}
                 variant="determinate"
@@ -102,7 +109,7 @@ export default function Contact() {
             </div>
 
             <div className={classes.progressclass}>
-              <div>5</div>
+            <Typography className={classes.text}> JavaScript </Typography>
               <BorderLinearProgress
                 className={classes.margin}
                 variant="determinate"
