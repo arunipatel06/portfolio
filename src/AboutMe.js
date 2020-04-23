@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "30px",
     marginBottom: "100px",
     justifyContent: "center",
+    width:"35%",
+    textAlign:"center",
+    margin:"0px auto"
   },
 
   content: {
@@ -47,10 +50,9 @@ const AboutMe = (props) => {
           >
             <Typography className={classes.title}>Hello! I'm Aruni</Typography>
             <Typography className={classes.aboutme}>
-              I am a recent University Graduate living in Toronto. <br />I have
-              1+ years of experience in development <br /> and programming field
-              seeking for full time <br /> opportunities. I am efficient and
-              enthusiastic to <br /> collaborate with team by means of strong
+              I am a recent University Graduate living in Toronto. I have
+              1+ years of experience in development and programming field. I am efficient and
+              enthusiastic to collaborate with team by means of strong
               commitment.
             </Typography>
           </div>
