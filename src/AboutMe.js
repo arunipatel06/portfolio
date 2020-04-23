@@ -1,50 +1,33 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import MyPicture from "./assests/Git.jpg";
-const useStyles = makeStyles((theme) => ({
 
-  text: {
-    textAlign: "left",
-    fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    textTransform: "uppercase",
-    fontSize: "25px",
+const useStyles = makeStyles((theme) => ({
+  title: {
+    textAlign: "center",
+    fontFamily: '"Manrope", sans-serif',
+    fontSize: "30px",
+    lineHeight: "35px",
     display: "flex",
+    color: "#260859",
+    justifyContent: "center",
+    margin: "60px 50px 35px 50px",
   },
 
   aboutme: {
-    backgroundColor: "#fb7664",
-    fontWeight: 900,
-    fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    margin: "150px 550px 150px 40px",
-    padding: "10px",
-    textAlign: "left",
-    color: "white",
-    fontSize: "45px",
-    lineHeight: "30px",
-    textTransform: "uppercase",
-  },
-  text2:{
-
-    fontSize:"20px",
-    fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    backgroundColor:"#5b5b5b",
-    border: "3px solid #7d7d7e",
-    color:"white",
-    fontWeight:"bold"
-  },
-  charts: {
-    borderBottom: "4px solid rgba(0, 0, 0, 0.25)",
-    color: "black",
-    textAlign: "center",
-    fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
+    fontWeight: 100,
+    fontFamily: '"Manrope", sans-serif',
+    color: "#260859",
     fontSize: "20px",
-    padding: "20px 0px 10px 0px",
-    margin: "0px 60px 40px 10px",
-    fontWeight: "bold",
+    lineHeight: "30px",
+    marginBottom: "100px",
+    justifyContent: "center",
   },
-  typo: {
-    
+
+  content: {
+    backgroundColor: "#f2f2f2",
+    textAlign: "center",
+    justifyContent: "center",
   },
 }));
 
@@ -52,29 +35,29 @@ const AboutMe = (props) => {
   const classes = useStyles();
 
   return (
-    <div style={{overflow:"hidden"}}>
-      <section>
-        <Grid container spacing={7}>
-          <Grid item xs={6} style={{ backgroundColor: "blue" }}>
-            <img src={MyPicture} style={{ height: "100vh" }}></img>
-          </Grid>
-
-          <Grid item xs={6}>
-            <div>
-                 <p className={classes.aboutme} style={{margin:"10px 5px"}}>About Me</p>
-
-                <div className={classes.text2} >
-                <p style={{margin:"10px 5px"}}>Aruni Patel- Java and React Developer</p>
-                </div>
-                
-            </div>
-          </Grid>
+    <div>
+      <Grid container>
+        <Grid item xs={12} className={classes.content}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <Typography className={classes.title}>Hello! I'm Aruni</Typography>
+            <Typography className={classes.aboutme}>
+              I am a recent University Graduate living in Toronto. <br />I have
+              1+ years of experience in development <br /> and programming field
+              seeking for full time <br /> opportunities. I am efficient and
+              enthusiastic to <br /> collaborate with team by means of strong
+              commitment.
+            </Typography>
+          </div>
         </Grid>
-      </section>
+      </Grid>
     </div>
   );
 };
 
 export default AboutMe;
-
-

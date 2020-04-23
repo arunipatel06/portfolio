@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Avatar, Typography } from "@material-ui/core";
+import { Grid, Avatar} from "@material-ui/core";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import Background from "./assests/Homepage3.jpg";
 import AvatarImage from "./assests/Git.jpg";
@@ -9,6 +9,7 @@ import "./HomePage.css";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import Education from "./Education";
+import AboutMe from "./AboutMe";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -87,6 +88,7 @@ const HomePage = (props) => {
           </div>
         </section>
       </Grid>
+      <div><AboutMe/></div>
       <div>
         <Skills />
       </div>
