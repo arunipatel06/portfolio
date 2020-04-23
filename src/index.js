@@ -19,6 +19,9 @@ WebFont.load({
       'Lucida Grande',
       'Mada',
       'Manrope',
+      'Manrope',
+      'Raleway',
+      'Open Sans'
     ],
   },
 });
