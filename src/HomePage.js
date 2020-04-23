@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Avatar, Typography } from "@material-ui/core";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import Background from "./assests/Homepage.jpg";
+import Background from "./assests/Homepage3.jpg";
 import AvatarImage from "./assests/Git.jpg";
 import "typeface-roboto";
 import "./HomePage.css";
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typo: {
     textAlign: "center",
-    color: "grey",
+    color: "white",
     fontSize: "45px",
     lineHeight: "50px",
     textTransform: "uppercase",
