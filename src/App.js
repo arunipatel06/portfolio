@@ -4,8 +4,7 @@ import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Skills from "./Skills";
 import Education from "./Education";
-// import EducationTimeline from "./EducationTimeline";
-import Hexx from "./Hexx";
+import AboutMe from "./AboutMe";
 class App extends Component {
 
   render() {
@@ -16,10 +15,13 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/contact" component={Contact} />
+                <Route exact path="/aboutme" component={AboutMe} />
                 <Route exact path="/skills" component={Skills}/>
                 <Route exact path="/education" component={Education}/>
                 {/* <Route exact path="/educationtimeline" component={EducationTimeline}/> */}
-                <Route exact path="/hexskill" component={Hexx}/>
+                {/* <Route exact path="/hexskill" component={Hexx}/>
+                <Route exact path="/Hexaskill" component={HexSkills}/> */}
+
 
               </Switch>
           </BrowserRouter>
