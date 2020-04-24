@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Timeline } from 'antd';
-import { Grid, Typography, Divider } from '@material-ui/core';
+import {Typography} from '@material-ui/core';
 import 'antd/dist/antd.css';
 import './Education.css';
 
