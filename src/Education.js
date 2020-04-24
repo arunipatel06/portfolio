@@ -4,6 +4,7 @@ import { Timeline } from 'antd';
 import {Typography} from '@material-ui/core';
 import 'antd/dist/antd.css';
 import './Education.css';
+import SchoolIcon from '@material-ui/icons/School';
 
 //Icons
 import { ClockCircleOutlined } from '@ant-design/icons';
@@ -50,7 +51,7 @@ const Education = (props) => {
       <Timeline mode={mode}>
         <Timeline.Item
           label="2015-2017"
-          dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}
+          dot={<SchoolIcon style={{ fontSize: '16px' }} />}
           color="red"
         >
           <Typography className={classes.heading}>
@@ -60,6 +61,7 @@ const Education = (props) => {
             Solve initial network problems
           </Typography>
         </Timeline.Item>
+
         <Timeline.Item
           label="2015-2017"
           dot={<ClockCircleOutlined style={{ fontSize: '26px' }} />}
