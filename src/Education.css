@@ -1,7 +1,11 @@
 .ant-timeline-item {
   font-size: 19px;
+  color: #0a7bc7;
+  padding-bottom: 30px;
 }
 
 .ant-timeline-item-label {
   padding-right: 10px;
+  color: #182153;
+  font-weight: 200px;
 }

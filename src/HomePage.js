@@ -10,7 +10,7 @@ import Skills from './Skills';
 import Contact from './Contact';
 import Education from './Education';
 import NewNavbar from './Navbar';
-import AboutMe from "./AboutMe";
+import AboutMe from './AboutMe';
 
 const useStyles = makeStyles((theme) => ({
   //--------------------
@@ -86,6 +86,7 @@ const HomePage = (props) => {
 
   return (
     <div className={classes.root}>
+      <NewNavbar />
       <Grid item xs={12}>
         <section className={classes.homeImage}>
           <div>
@@ -126,12 +127,14 @@ const HomePage = (props) => {
           </div>
         </section>
       </Grid>
-      <NewNavbar />
-      <div><AboutMe /></div>
+
+      <div>
+        <AboutMe />
+      </div>
       <div>
         <Skills />
       </div>
-      <div style={{ justifyContent: 'center', height: '100vh' }}>
+      <div>
         <Education />
       </div>
       <div>
