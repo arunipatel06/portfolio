@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Timeline } from 'antd';
 import { Typography, Grid, Divider } from '@material-ui/core';
 import 'antd/dist/antd.css';
@@ -8,77 +7,10 @@ import SchoolIcon from '@material-ui/icons/School';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 import WorkIcon from '@material-ui/icons/Work';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
-//Icons
-// import { ClockCircleOutlined } from '@ant-design/icons';
-
-const usestyles = makeStyles((theme) => ({
-  title: {
-    textAlign: 'left',
-    fontFamily: '"Manrope",sans-serif',
-    fontSize: '22px',
-    lineHeight: '30px',
-    fontWeight: 'normal',
-    color: 'grey',
-  },
-  contentBody: {
-    paddingBottom: '25px',
-  },
-  heading: {
-    textAlign: 'left',
-    fontFamily: '"Manrope",sans-serif',
-    fontSize: '24px',
-    lineHeight: '30px',
-    fontWeight: 600,
-    color: '#182153',
-    paddingBottom: '5px',
-    width: '94%',
-  },
-  heading1: {
-    textAlign: 'center',
-    fontFamily: '"Manrope", sans-serif',
-    fontSize: '35px',
-    lineHeight: '35px',
-    display: 'flex',
-    color: '#260859',
-    justifyContent: 'center',
-    margin: '30px 0px',
-    [theme.breakpoints.up('sm')]: {
-      margin: '50px 0px',
-    },
-  },
-  divider: {
-    height: '1px',
-    backgroundColor: '#f0f2f5',
-  },
-
-  content: {
-    fontStyle: 'italic',
-    fontFamily: '"Manrope",sans-serif',
-    fontSize: '20px',
-    lineHeight: '25px',
-    fontWeight: 'normal',
-    color: '#182153',
-    paddingBottom: '10px',
-    width: '96%',
-  },
-  paragraph: {
-    textAlign: 'left',
-    paddingBottom: '5px',
-    maxWidth: '84%',
-    color: '#182153',
-  },
-  icons: {
-    color: '#fcc93a',
-    fontSize: '25px',
-  },
-  container: {
-    textAlign: 'center',
-    justifyContent: 'center',
-  },
-}));
+import {useStyles} from './JssStyleSheet/JssEducation';
 
 const Education = (props) => {
-  const classes = usestyles();
+  const classes = useStyles();
   const mode = 'left';
   return (
     <div>
