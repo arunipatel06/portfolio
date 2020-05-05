@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Avatar, Typography, Divider } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -7,10 +7,10 @@ import AvatarImage from './assests/Git.jpg';
 import 'typeface-roboto';
 import './HomePage.css';
 import Skills from './Skills';
-import Contact from './Contact';
 import Education from './Education';
 import NewNavbar from './Navbar';
 import AboutMe from './AboutMe';
+import Footer from './Footer';
 
 const useStyles = makeStyles((theme) => ({
   //--------------------
@@ -83,10 +83,25 @@ const useStyles = makeStyles((theme) => ({
 
 const HomePage = (props) => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  const resourcesRef = useRef(null);
+  const scrollToResources = () => scrollToRef(resourcesRef);
+  const skillsRef = useRef(null);
+  const scrollToSkills = () => scrollToRef(skillsRef);
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className={classes.root}>
-      <NewNavbar />
+      <NewNavbar
+        scrollToResources={scrollToResources}
+        scrollToSkills={scrollToSkills}
+        scrollToTop={scrollToTop}
+      />
       <Grid item xs={12}>
         <section className={classes.homeImage}>
           <div>
@@ -112,6 +127,7 @@ const HomePage = (props) => {
                 margin: '20px auto 0px',
                 '&:hover': { backgroundColor: '#555' },
               }}
+              onClick={scrollToResources}
             >
               View my work
               <ArrowForwardIcon
@@ -131,14 +147,14 @@ const HomePage = (props) => {
       <div>
         <AboutMe />
       </div>
-      <div>
+      <div ref={skillsRef}>
         <Skills />
       </div>
-      <div>
+      <div ref={resourcesRef}>
         <Education />
       </div>
       <div>
-        <Contact />
+        <Footer />
       </div>
     </div>
   );

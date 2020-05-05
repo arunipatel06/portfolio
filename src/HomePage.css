@@ -29,3 +29,7 @@
   transform: rotateZ(90deg);
   color: #4f4f4f;
 }
+
+html {
+  scroll-behavior: smooth;
+}
