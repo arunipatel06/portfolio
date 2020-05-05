@@ -67,7 +67,7 @@ const MobileNavMenu = ({
                 setScrollToResources();
               }}
             >
-              Projects
+              Work
             </Button>
           </div>
 

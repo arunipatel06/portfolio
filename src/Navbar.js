@@ -228,7 +228,7 @@ const NewNavbar = (props) => {
                 className={trans ? classes.transButton : classes.button}
                 onClick={props.scrollToResources}
               >
-                Projects
+                WORK
               </Button>
 
               <Button
