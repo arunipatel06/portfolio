@@ -21,7 +21,7 @@ const usestyles = makeStyles(theme => ({
     margin: "auto",
     textAlign: "center",
     fontFamily: "freight-sans-pro Helvetica Neue Helvetica Arial sans-serif",
-    fontSize: "60px",
+    fontSize: "50px",
     fontWeight: "bold",
     color: "white",
     justifyContent: "center",
@@ -29,7 +29,7 @@ const usestyles = makeStyles(theme => ({
   },
   body: {
     backgroundColor: "#39373a",
-    height: "100vh",
+    height: "400px",
     width: "100%",
     justifyContent: "center",
     display: "flex",

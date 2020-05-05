@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Mada", sans-serif',
     color: 'white',
     fontSize: '20px',
-    fontWeight: 600,
+    fontWeight: "normal",
     margin: '0px 20px',
     '&:hover': {
       color: '#e31b6d',
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Mada", sans-serif',
     color: 'white',
     fontSize: '20px',
-    fontWeight: 600,
+    fontWeight: "normal",
     margin: '0px 20px',
     '&:hover': {
       color: '#e31b6d',

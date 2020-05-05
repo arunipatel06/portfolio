@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   skills: {
-    // width: '100%',
     textAlign: 'center',
   },
 
