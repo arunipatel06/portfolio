@@ -139,7 +139,7 @@ const ContactMeForm = ({ open, setOpen }) => {
   const sendFeedback = (templateId, variables) => {
     emailjs
       .send(
-        'jaydeepvachhani2@gmail.com',
+        'arunipatel06@gmail.com',
         templateId,
         variables,
         process.env.REACT_APP_USERKEY_EMAILJS
@@ -196,7 +196,7 @@ const ContactMeForm = ({ open, setOpen }) => {
     if (!valid) {
       return;
     }
-    const templateId = 'template_x66jiHpl';
+    const templateId = 'template_1H5sAong';
     sendFeedback(templateId, {
       message_html: state.message,
       from_name: state.fullName,
