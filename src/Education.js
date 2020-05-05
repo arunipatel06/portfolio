@@ -31,6 +31,7 @@ const usestyles = makeStyles((theme) => ({
     fontWeight: 600,
     color: '#182153',
     paddingBottom: '5px',
+    width: '94%',
   },
   heading1: {
     textAlign: 'center',
@@ -40,11 +41,14 @@ const usestyles = makeStyles((theme) => ({
     display: 'flex',
     color: '#260859',
     justifyContent: 'center',
+    margin: '30px 0px',
+    [theme.breakpoints.up('sm')]: {
+      margin: '50px 0px',
+    },
   },
   divider: {
     height: '1px',
     backgroundColor: '#f0f2f5',
-    margin: '50px 0px',
   },
 
   content: {
@@ -55,11 +59,12 @@ const usestyles = makeStyles((theme) => ({
     fontWeight: 'normal',
     color: '#182153',
     paddingBottom: '10px',
+    width: '96%',
   },
   paragraph: {
     textAlign: 'left',
     paddingBottom: '5px',
-    maxWidth: '60%',
+    maxWidth: '84%',
     color: '#182153',
   },
   icons: {
@@ -87,11 +92,17 @@ const Education = (props) => {
             }}
           >
             {/* work experience */}
-            <Divider className={classes.divider} />
+            <Divider
+              className={classes.divider}
+              style={{ marginTop: '10px' }}
+            />
             <Typography className={classes.heading1}>
               Work Experience
             </Typography>
-            <Divider className={classes.divider} />
+            <Divider
+              className={classes.divider}
+              style={{ marginBottom: '30px' }}
+            />
 
             <Timeline mode={mode}>
               <Timeline.Item
@@ -105,11 +116,11 @@ const Education = (props) => {
                   Embers InfoTech, Gujarat, India.
                 </Typography>
                 <Typography className={classes.paragraph}>
-                  <b>Technology:</b> React, CSS, GraphQL, Circle Ci, Material UI
-                  <br />
-                  Managed on creating webpage layout, designed and implemented
-                  web components with React, worked with agile quads and
-                  experienced in using functional unit tests.
+                  Revamped existing website to improve user experience.
+                  Extensively utilized Github for version control in agile
+                  environment. Created GraphQL endpoints to handle client-side
+                  request. Designed and implemented web components with React
+                  and Material Ui.
                 </Typography>
               </Timeline.Item>
               <Timeline.Item
@@ -124,8 +135,9 @@ const Education = (props) => {
                 </Typography>
                 <Typography className={classes.paragraph}>
                   Answered an average of 50 calls per day, addressing customer
-                  inquiries. Achieved revenue targets, document problems and
-                  record solutions offered.
+                  inquiries, entering customer details with written
+                  communication skills. Achieved revenue targets, document
+                  problems and record solutions offered.
                 </Typography>
               </Timeline.Item>
             </Timeline>
@@ -141,9 +153,15 @@ const Education = (props) => {
               justifyContent: 'center',
             }}
           >
-            <Divider className={classes.divider} />
+            <Divider
+              className={classes.divider}
+              style={{ marginTop: '10px' }}
+            />
             <Typography className={classes.heading1}>Education</Typography>
-            <Divider className={classes.divider} />
+            <Divider
+              className={classes.divider}
+              style={{ marginBottom: '30px' }}
+            />
             <Timeline mode={mode}>
               <Timeline.Item
                 label="May 2018 - Dec 2019"
@@ -158,9 +176,10 @@ const Education = (props) => {
                 <Typography className={classes.paragraph}>
                   Major Courses: Software Design Methodologies, Advance
                   Programming Practices, Software Requirements Specification,
-                  Project Management, Cloud Networking and few more. Along with
-                  the courses I have done several projects. For detailed
-                  Description download my resume.
+                  Project Management, Cloud Networking and few more.
+                  <br /> Along with the courses I have done several projects
+                  individually and in team. For detailed description refer my
+                  resume above.
                 </Typography>
               </Timeline.Item>
 
@@ -175,11 +194,9 @@ const Education = (props) => {
                   Gujarat Technological University, Gujarat, India.
                 </Typography>
                 <Typography className={classes.paragraph}>
-                  Major Courses: Software Design Methodologies, Advance
-                  Programming Practices, Software Requirements Specification,
-                  Project Management, Cloud Networking and few more. Along with
-                  the courses I have done several projects. For detailed
-                  Description download my resume.
+                  Major Courses: Operating Sytem, C++, System Programming, Java,
+                  Design Engineering, .NET, Software Engineering, Web
+                  Technology, Data Mining, Python Programming.
                 </Typography>
               </Timeline.Item>
             </Timeline>

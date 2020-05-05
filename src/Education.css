@@ -1,11 +1,56 @@
 .ant-timeline-item {
   font-size: 19px;
   color: #0a7bc7;
-  padding-bottom: 30px;
 }
 
 .ant-timeline-item-label {
-  padding-right: 10px;
   color: #182153;
   font-weight: 200px;
+  width: calc(34% - 16px);
+  text-align: left;
+  margin: 0px 10px;
+}
+.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline-item-left .ant-timeline-item-content {
+  left: calc(30% - 4px);
+  width: calc(80% - 14px);
+  /* text-align: left; */
+}
+
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-right .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-label .ant-timeline-item-tail,
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head,
+.ant-timeline.ant-timeline-alternate .ant-timeline-item-head-custom,
+.ant-timeline.ant-timeline-right .ant-timeline-item-head-custom,
+.ant-timeline.ant-timeline-label .ant-timeline-item-head-custom {
+  left: 37%;
+}
+
+.ant-timeline.ant-timeline-label .ant-timeline-item-label {
+  position: absolute;
+  top: -7.001px;
+  width: calc(34% - 16px);
+  text-align: right;
+}
+
+.ant-timeline.ant-timeline-alternate
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-right
+  .ant-timeline-item-left
+  .ant-timeline-item-content,
+.ant-timeline.ant-timeline-label
+  .ant-timeline-item-left
+  .ant-timeline-item-content {
+  left: calc(38% - 4px);
+  width: calc(67% - 12px);
+  text-align: left;
 }
