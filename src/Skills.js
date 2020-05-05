@@ -17,11 +17,33 @@ const useStyles = makeStyles((theme) => ({
     color: '#260859',
     justifyContent: 'center',
     display: 'flex',
+    margin: '30px 0px',
+    [theme.breakpoints.up('sm')]: {
+      margin: '50px 0px',
+    },
   },
   divider: {
     height: '1px',
     backgroundColor: '#f0f2f5',
-    margin: '50px 0px',
+  },
+  pieBody: {
+    [theme.breakpoints.up('sm')]: {
+      padding: '0px 150px',
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '0px 50px 0px 250px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '0px 0px 0px 350px',
+    },
+  },
+  barBody: {
+    [theme.breakpoints.up('sm')]: {
+      padding: '0px 100px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '17px 100px 0px 0px',
+    },
   },
 }));
 
@@ -31,16 +53,14 @@ const Skills = (props) => {
   return (
     <div>
       <section className={classes.skills}>
-        <Divider className={classes.divider} />
+        <Divider className={classes.divider} style={{ marginTop: '10px' }} />
         <Typography className={classes.header}>Skills</Typography>
-        <Divider className={classes.divider} />
+        <Divider className={classes.divider} style={{ marginBottom: '20px' }} />
         <Grid container>
-          <Grid item xs={12} md={6} style={{ padding: '0px 50px 0px 100px' }}>
-            <div style={{ maxWidth: '500px' }}>
-              <PieChart />
-            </div>
+          <Grid item xs={12} lg={6} className={classes.pieBody}>
+            <PieChart />
           </Grid>
-          <Grid item xs={12} md={6} style={{ padding: '17px 100px 0px 50px' }}>
+          <Grid item xs={12} lg={6} className={classes.barBody}>
             <Progressbar />
           </Grid>
         </Grid>
