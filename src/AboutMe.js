@@ -74,12 +74,14 @@ const AboutMe = (props) => {
           <div className={classes.aboutMeBody}>
             <Typography className={classes.title}>Hello! I'm Aruni</Typography>
             <Typography className={classes.aboutme}>
-              I am a recent University Graduate living in Toronto. I have 1+
-              years of experience in development and programming field. Eager to
-              join your team for smooth product development. I am efficient and
-              enthusiastic to collaborate with team by means of strong
-              commitment.
+              I am self-motivated, proactive University Graduate 
+              living in Toronto with 2+ years of experience in producing 
+              robust code for high-volume companies. Proven abilities 
+              to take initiatives with top-notch leadership, problem-solving 
+              and communication skills to drive a remarkable impact into a team.  
+            Below is the link to my resume where you can find more details about my work.
             </Typography>
+
             <div>
               <Button
                 variant="outlined"
