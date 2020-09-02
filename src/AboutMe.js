@@ -79,7 +79,8 @@ const AboutMe = (props) => {
               high-volume companies. Proven abilities to take initiatives with
               top-notch leadership, problem-solving and communication skills to
               drive a remarkable impact into a team. Below is the link to my
-              resume where you can find more details about my work.
+              resume where you can find more details about my work. Feel free to
+              contact me if you have any questions and concerns.
             </Typography>
 
             <div>
