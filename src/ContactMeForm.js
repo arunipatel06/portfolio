@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from "react";
 import {
   IconButton,
   Button,
@@ -11,101 +11,101 @@ import {
   CircularProgress,
   Divider,
   Modal,
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import emailjs from 'emailjs-com';
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import emailjs from "emailjs-com";
 
 //Images
-import contactForm from './assests/contactForm.jpg';
+import contactForm from "./assests/contactForm.jpg";
 
 //Icons
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import EmailIcon from '@material-ui/icons/Email';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-import CancelIcon from '@material-ui/icons/Cancel';
-import { Clear } from '@material-ui/icons';
-require('dotenv').config();
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import EmailIcon from "@material-ui/icons/Email";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
+import CancelIcon from "@material-ui/icons/Cancel";
+import { Clear } from "@material-ui/icons";
+require("dotenv").config();
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: '#FAFAFA',
+    background: "#FAFAFA",
   },
   body: {
-    position: 'relative',
-    width: '365px',
+    position: "relative",
+    width: "365px",
     backgroundColor: theme.palette.background.default,
-    margin: '100px auto 0px',
+    margin: "100px auto 0px",
     outline: 0,
-    overflowY: 'hidden',
-    [theme.breakpoints.up('md')]: {
-      width: '900px',
+    overflowY: "hidden",
+    [theme.breakpoints.up("md")]: {
+      width: "900px",
     },
   },
   formContainer: {
-    overflow: 'hidden',
-    padding: '10px 50px',
+    overflow: "hidden",
+    padding: "10px 50px",
   },
   header: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: '20px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: "20px",
   },
   title: {
     fontFamily: '"Mada", sans-serif',
     fontWeight: 600,
-    fontSize: '36px',
-    lineHeight: '51px',
-    color: '#1b242f',
+    fontSize: "36px",
+    lineHeight: "51px",
+    color: "#1b242f",
   },
   mobileTitle: {
     fontFamily: '"Mada", sans-serif',
     fontWeight: 500,
-    fontSize: '22px',
-    lineHeight: '24px',
-    color: '#1b242f',
+    fontSize: "22px",
+    lineHeight: "24px",
+    color: "#1b242f",
   },
   button: {
-    color: 'white',
-    background: 'black',
-    padding: '10px 27px',
-    textTransform: 'none',
-    width: '250px',
+    color: "white",
+    background: "black",
+    padding: "10px 27px",
+    textTransform: "none",
+    width: "250px",
   },
   left: {
-    textAlign: 'left',
+    textAlign: "left",
   },
   textTitle: {
     fontFamily: '"Mada", sans-serif',
-    fontWeight: '600',
-    fontSize: '18px',
-    lineHeight: '28px',
-    margin: '0px 0px 10px 0px',
-    color: '#1b242f',
+    fontWeight: "600",
+    fontSize: "18px",
+    lineHeight: "28px",
+    margin: "0px 0px 10px 0px",
+    color: "#1b242f",
   },
   TextField: {
-    fontFamily: 'sans-serif',
-    width: '100%',
+    fontFamily: "sans-serif",
+    width: "100%",
   },
   mobileOverlay: {
     padding: 0,
-    height: '90vh',
-    width: '100%',
-    position: 'fixed',
+    height: "90vh",
+    width: "100%",
+    position: "fixed",
     zIndex: 1100,
     left: 0,
     top: 0,
     backgroundColor: theme.palette.background.default,
-    boxShadow: '4px 4px 10px 0 rgba(0, 0, 0, 0.3)',
+    boxShadow: "4px 4px 10px 0 rgba(0, 0, 0, 0.3)",
   },
   mobileInput: {
-    height: '80%',
+    height: "80%",
   },
   contactImage: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'block',
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "block",
     },
   },
 }));
@@ -114,9 +114,9 @@ const ContactMeForm = ({ open, setOpen }) => {
   const classes = useStyles();
 
   const [state, setState] = useState({
-    fullName: '',
-    emailAddress: '',
-    message: '',
+    fullName: "",
+    emailAddress: "",
+    message: "",
   });
 
   const [error, setError] = useState({
@@ -126,9 +126,9 @@ const ContactMeForm = ({ open, setOpen }) => {
       message: false,
     },
     messages: {
-      fullName: '',
-      emailAddress: '',
-      message: '',
+      fullName: "",
+      emailAddress: "",
+      message: "",
     },
   });
 
@@ -139,21 +139,21 @@ const ContactMeForm = ({ open, setOpen }) => {
   const sendFeedback = (templateId, variables) => {
     emailjs
       .send(
-        'arunipatel06@gmail.com',
+        "arunipatel06@gmail.com",
         templateId,
         variables,
-        process.env.REACT_APP_USERKEY_EMAILJS
+        "user_yCoBFpYuVMZUzviOhGa7M"
       )
       .then((res) => {
         setFormLoading(false);
         setFormSuccess(false);
-        console.log('Email successfully sent!');
+        console.log("Email successfully sent!");
       })
       // Handle errors here however you like, or use a React error boundary
       .catch((err) => {
         setFormLoading(false);
         console.error(
-          'Oh well, you failed. Here some thoughts on the error that occured:',
+          "Oh well, you failed. Here some thoughts on the error that occured:",
           err
         );
       });
@@ -173,13 +173,13 @@ const ContactMeForm = ({ open, setOpen }) => {
     // Check each params
     for (const [key, value] of Object.entries(state)) {
       let valid = value.trim() ? true : false;
-      if (key === 'emailAddress') {
+      if (key === "emailAddress") {
         valid = isValidEmail(value);
       }
 
       checkError.params[key] = !valid;
       if (!valid) {
-        const message = 'This field is not valid';
+        const message = "This field is not valid";
         checkError.messages[key] = message;
       }
     }
@@ -196,28 +196,28 @@ const ContactMeForm = ({ open, setOpen }) => {
     if (!valid) {
       return;
     }
-    const templateId = 'template_1H5sAong';
+    const templateId = "template_1H5sAong";
     sendFeedback(templateId, {
       message_html: state.message,
       from_name: state.fullName,
       reply_to: state.emailAddress,
     });
     setShowDialog(true);
-    setState({ fullName: '', emailAddress: '', message: '' });
+    setState({ fullName: "", emailAddress: "", message: "" });
   };
 
   const handleChange = (name) => (event) => {
     setState({ ...state, [name]: event.target.value });
     setError({
       params: {
-        fullName: '',
-        emailAddress: '',
-        message: '',
+        fullName: "",
+        emailAddress: "",
+        message: "",
       },
       messages: {
-        fullName: '',
-        emailAddress: '',
-        message: '',
+        fullName: "",
+        emailAddress: "",
+        message: "",
       },
     });
   };
@@ -232,7 +232,7 @@ const ContactMeForm = ({ open, setOpen }) => {
       <div className={classes.body}>
         <IconButton
           onClick={() => setOpen(false)}
-          style={{ position: 'absolute', top: '8px', right: '8px' }}
+          style={{ position: "absolute", top: "8px", right: "8px" }}
         >
           <Clear />
         </IconButton>
@@ -252,17 +252,17 @@ const ContactMeForm = ({ open, setOpen }) => {
                 <Grid
                   container
                   spacing={1}
-                  style={{ textAlign: 'center', overflow: 'hidden' }}
+                  style={{ textAlign: "center", overflow: "hidden" }}
                 >
                   <Grid className={classes.left} item xs={12}>
                     <div
                       className={classes.textTitle}
-                      style={{ marginTop: '10px' }}
+                      style={{ marginTop: "10px" }}
                     >
                       Full Name
                     </div>
                     <TextField
-                      onChange={handleChange('fullName')}
+                      onChange={handleChange("fullName")}
                       error={error.params.fullName}
                       helperText={error.messages.fullName}
                       value={state.fullName}
@@ -275,7 +275,7 @@ const ContactMeForm = ({ open, setOpen }) => {
                     <div className={classes.textTitle}>Email</div>
                     <TextField
                       className={classes.TextField}
-                      onChange={handleChange('emailAddress')}
+                      onChange={handleChange("emailAddress")}
                       value={state.emailAddress}
                       error={error.params.emailAddress}
                       helperText={error.messages.emailAddress}
@@ -295,7 +295,7 @@ const ContactMeForm = ({ open, setOpen }) => {
                     <div className={classes.textTitle}>Message</div>
                     <TextField
                       className={classes.TextField}
-                      onChange={handleChange('message')}
+                      onChange={handleChange("message")}
                       value={state.message}
                       error={error.params.message}
                       helperText={error.messages.message}
@@ -305,7 +305,7 @@ const ContactMeForm = ({ open, setOpen }) => {
                       variant="outlined"
                     />
                   </Grid>
-                  <Grid item xs={12} style={{ marginTop: '15px' }}>
+                  <Grid item xs={12} style={{ marginTop: "15px" }}>
                     <Button
                       type="submit"
                       variant="contained"
@@ -324,7 +324,7 @@ const ContactMeForm = ({ open, setOpen }) => {
             <img
               alt="Revre"
               src={contactForm}
-              style={{ height: '100%', width: '100%' }}
+              style={{ height: "100%", width: "100%" }}
             />
           </Grid>
         </Grid>
@@ -340,16 +340,16 @@ const ContactMeForm = ({ open, setOpen }) => {
       open={showDialog}
       aria-labelledby="responsive-dialog-title"
     >
-      <DialogTitle id="responsive-dialog-title">{'Processing... '}</DialogTitle>
+      <DialogTitle id="responsive-dialog-title">{"Processing... "}</DialogTitle>
       <DialogContent>
-        <div style={{ textAlign: 'center', margin: '10px auto' }}>
+        <div style={{ textAlign: "center", margin: "10px auto" }}>
           {formLoading ? (
             <CircularProgress />
           ) : formSuccess ? (
-            <CancelIcon style={{ fontSize: '50px', color: 'red' }} />
+            <CancelIcon style={{ fontSize: "50px", color: "red" }} />
           ) : (
             <CheckCircleOutlineIcon
-              style={{ fontSize: '50px', color: 'green' }}
+              style={{ fontSize: "50px", color: "green" }}
             />
           )}
         </div>
