@@ -91,7 +91,7 @@ const AboutMe = (props) => {
                 size="large"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1KYVk5pNelDi10fJESzpKREZJQ9g2drT0/view?usp=sharing"
+                    "https://drive.google.com/file/d/1fHhJqjwIWeSP_L558WWNjXbJFXUIGMTW/view?usp=sharing"
                   )
                 }
               >
