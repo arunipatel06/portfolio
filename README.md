@@ -1,6 +1,3 @@
-
-This is my portfolio based on React and NodeJS.
-
 # Portfolio
 This is my *portfolio* project which is based on **React** and **Node.JS**
 
