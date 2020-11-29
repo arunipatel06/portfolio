@@ -74,13 +74,16 @@ const AboutMe = (props) => {
           <div className={classes.aboutMeBody}>
             <Typography className={classes.title}>Hello! I'm Aruni</Typography>
             <Typography className={classes.aboutme}>
-              I am self-motivated, proactive University Graduate living in
-              Toronto with 2+ years of experience in producing robust code for
-              high-volume companies. Proven abilities to take initiatives with
-              top-notch leadership, problem-solving and communication skills to
-              drive a remarkable impact into a team. Below is the link to my
-              resume where you can find more details about my work. Feel free to
-              contact me if you have any questions and concerns.
+              I am Professional with 2+ years of working experience in producing
+              robust code for high volume companies. Drive remarkable impact
+              into a team with abilities to take initiatives with top-notch
+              leadership skills. At Embers InfoTech developed ground-breaking
+              websites with 95% cross-browser compatibility and boosted client
+              satisfaction rating by more than 50%. Overhauled the obsolete
+              legacy source code of two production applications, resulting in
+              increased usability and reduced load time by 50%. Achieved STAR
+              Performer Award for completing 10+ technical projects and building
+              relation with the same client.
             </Typography>
 
             <div>
@@ -91,7 +94,7 @@ const AboutMe = (props) => {
                 size="large"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1fHhJqjwIWeSP_L558WWNjXbJFXUIGMTW/view?usp=sharing"
+                    "https://drive.google.com/file/d/1tkwa_g3qZh8dXyybv_OAf93lGjD_gaoi/view?usp=sharing"
                   )
                 }
               >
