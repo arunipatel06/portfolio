@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Grid, Divider, Button } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
@@ -6,7 +6,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import YoutubeVideo from "./YoutubeVideo";
 //images
 import Project1 from "../src/assests/Project1.jpg";
 import Project2 from "../src/assests/Project2.png";
@@ -96,6 +96,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Project = (props) => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const body1 = (
     <div>
@@ -121,51 +123,10 @@ const Project = (props) => {
                   <CardMedia
                     className={classes.cardImage}
                     image={Project1}
-                    title="User Authentication"
+                    title="React DashBoard"
                     style={{
                       height: "194px",
                       Border: "3px solid black",
-                    }}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      User Authentication
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      React App with User Authentication implemented with
-                      MongoDB and GraphQl Server.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      variant="outlined"
-                      className={classes.cardButton}
-                      size="large"
-                      onClick={() =>
-                        window.open(
-                          "https://arunipatel06.github.io/React-DashBoard/"
-                        )
-                      }
-                    >
-                      View Here
-                    </Button>
-                  </CardActions>
-                </CardActionArea>
-              </Card>
-            </Grid>
-            <Grid key={4} item>
-              <Card className={classes.paper}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.cardImage}
-                    image={Project2}
-                    title="User Authentication"
-                    style={{
-                      height: "194px",
                     }}
                   />
                   <CardContent>
@@ -194,6 +155,48 @@ const Project = (props) => {
                     >
                       View Here
                     </Button>
+                  </CardActions>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            <Grid key={4} item>
+              <Card className={classes.paper}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.cardImage}
+                    image={Project2}
+                    title="User Authentication"
+                    style={{
+                      height: "194px",
+                    }}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      User Authentication
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      React App with User Authentication implemented with
+                      MongoDB and GraphQl Server.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      variant="outlined"
+                      className={classes.cardButton}
+                      size="large"
+                      onClick={() => setIsVideoPlaying(true)}
+                    >
+                      View Here
+                    </Button>
+                    <YoutubeVideo
+                      isVideoPlaying={isVideoPlaying}
+                      setIsVideoPlaying={setIsVideoPlaying}
+                      videoId="RTuheX7aMNw"
+                    />
                   </CardActions>
                 </CardActionArea>
               </Card>
