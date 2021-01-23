@@ -1,15 +1,16 @@
-import React, { useEffect, useRef } from 'react';
-import { Grid, Avatar, Typography, Divider } from '@material-ui/core';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import AvatarImage from './assests/Git.jpg';
-import 'typeface-roboto';
-import './HomePage.css';
-import Skills from './Skills';
-import Education from './Education';
-import NewNavbar from './Navbar';
-import AboutMe from './AboutMe';
-import Footer from './Footer';
-import {useStyles} from './JssStyleSheet/JssHomePage';
+import React, { useEffect, useRef } from "react";
+import { Grid, Avatar, Typography, Divider } from "@material-ui/core";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import AvatarImage from "./assests/Git.jpg";
+import "typeface-roboto";
+import "./HomePage.css";
+import Skills from "./Skills";
+import Education from "./Education";
+import NewNavbar from "./Navbar";
+import AboutMe from "./AboutMe";
+import Projects from "./Projects";
+import Footer from "./Footer";
+import { useStyles } from "./JssStyleSheet/JssHomePage";
 
 const HomePage = (props) => {
   const classes = useStyles();
@@ -21,6 +22,9 @@ const HomePage = (props) => {
   const scrollToResources = () => scrollToRef(resourcesRef);
   const skillsRef = useRef(null);
   const scrollToSkills = () => scrollToRef(skillsRef);
+  const projectsRef = useRef(null);
+  const scrollToProjects = () => scrollToRef(projectsRef);
+
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -31,6 +35,7 @@ const HomePage = (props) => {
         scrollToResources={scrollToResources}
         scrollToSkills={scrollToSkills}
         scrollToTop={scrollToTop}
+        scrollToProjects={scrollToProjects}
       />
       <Grid item xs={12}>
         <section className={classes.homeImage}>
@@ -42,20 +47,20 @@ const HomePage = (props) => {
             <Typography varient="h3" className={classes.titleName}>
               ARUNI PATEL
             </Typography>
-            <Divider style={{ height: '1px', backgroundColor: '#f0f2f5' }} />
+            <Divider style={{ height: "1px", backgroundColor: "#f0f2f5" }} />
             <Typography
               variant="h5"
               className={classes.upperTitle}
-              style={{ marginTop: '10px' }}
+              style={{ marginTop: "10px" }}
             >
               DEVELOPER, CODER
             </Typography>
             <div
               className="homeWork"
               style={{
-                borderRadius: '25px',
-                margin: '20px auto 0px',
-                '&:hover': { backgroundColor: '#555' },
+                borderRadius: "25px",
+                margin: "20px auto 0px",
+                "&:hover": { backgroundColor: "#555" },
               }}
               onClick={scrollToResources}
             >
@@ -63,10 +68,10 @@ const HomePage = (props) => {
               <ArrowForwardIcon
                 className="Arrow"
                 style={{
-                  position: 'absolute',
-                  fontSize: '20',
-                  right: '35px',
-                  top: '8px',
+                  position: "absolute",
+                  fontSize: "20",
+                  right: "35px",
+                  top: "8px",
                 }}
               />
             </div>
@@ -77,11 +82,14 @@ const HomePage = (props) => {
       <div>
         <AboutMe />
       </div>
-      <div ref={skillsRef}>
-        <Skills />
-      </div>
       <div ref={resourcesRef}>
         <Education />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={skillsRef}>
+        <Skills />
       </div>
       <div>
         <Footer />
