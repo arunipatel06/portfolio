@@ -1,29 +1,31 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b7569a02.chunk.css",
-    "main.js": "/portfolio/static/js/main.3ce3235f.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.3ce3235f.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.dca2253a.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.dca2253a.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/css/2.c1ac4d55.chunk.css": "/portfolio/static/css/2.c1ac4d55.chunk.css",
-    "static/js/2.6cfa99f0.chunk.js": "/portfolio/static/js/2.6cfa99f0.chunk.js",
-    "static/js/2.6cfa99f0.chunk.js.map": "/portfolio/static/js/2.6cfa99f0.chunk.js.map",
+    "static/js/2.fd7fb88b.chunk.js": "/portfolio/static/js/2.fd7fb88b.chunk.js",
+    "static/js/2.fd7fb88b.chunk.js.map": "/portfolio/static/js/2.fd7fb88b.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.d6dd4323fbeb7c2c55258ddfcd573dfe.js": "/portfolio/precache-manifest.d6dd4323fbeb7c2c55258ddfcd573dfe.js",
+    "precache-manifest.fb91922702fb5892293daadb798344d6.js": "/portfolio/precache-manifest.fb91922702fb5892293daadb798344d6.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.c1ac4d55.chunk.css.map": "/portfolio/static/css/2.c1ac4d55.chunk.css.map",
     "static/css/main.b7569a02.chunk.css.map": "/portfolio/static/css/main.b7569a02.chunk.css.map",
-    "static/js/2.6cfa99f0.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6cfa99f0.chunk.js.LICENSE.txt",
+    "static/js/2.fd7fb88b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.fd7fb88b.chunk.js.LICENSE.txt",
     "static/media/Git.jpg": "/portfolio/static/media/Git.a1e940d4.jpg",
     "static/media/Homepage.jpg": "/portfolio/static/media/Homepage.e5ad077b.jpg",
+    "static/media/Project1.jpg": "/portfolio/static/media/Project1.19331d6e.jpg",
+    "static/media/Project2.png": "/portfolio/static/media/Project2.ac8ae421.png",
     "static/media/contactForm.jpg": "/portfolio/static/media/contactForm.9cac8be1.jpg",
     "static/media/index.css": "/portfolio/static/media/roboto-latin-900italic.ebf6d164.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.209c2d7e.js",
     "static/css/2.c1ac4d55.chunk.css",
-    "static/js/2.6cfa99f0.chunk.js",
+    "static/js/2.fd7fb88b.chunk.js",
     "static/css/main.b7569a02.chunk.css",
-    "static/js/main.3ce3235f.chunk.js"
+    "static/js/main.dca2253a.chunk.js"
   ]
 }
