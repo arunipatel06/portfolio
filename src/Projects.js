@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Project = (props) => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const body1 = (

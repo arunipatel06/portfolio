@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
       width: "60%",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "35%",
+      width: "50%",
     },
   },
 
@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "19px",
     borderRadius: "25px",
     color: "#260859",
+    "&:hover": {
+      color: "#ffffff",
+      backgroundColor: "#260859",
+    },
   },
   aboutMeBody: {
     display: "flex",
@@ -74,16 +78,19 @@ const AboutMe = (props) => {
           <div className={classes.aboutMeBody}>
             <Typography className={classes.title}>Hello! I'm Aruni</Typography>
             <Typography className={classes.aboutme}>
-              I am Professional with 2+ years of working experience in producing
-              robust code for high volume companies. Drive remarkable impact
-              into a team with abilities to take initiatives with top-notch
-              leadership skills. At Embers InfoTech developed ground-breaking
-              websites with 95% cross-browser compatibility and boosted client
-              satisfaction rating by more than 50%. Overhauled the obsolete
-              legacy source code of two production applications, resulting in
-              increased usability and reduced load time by 50%. Achieved STAR
-              Performer Award for completing 10+ technical projects and building
-              relation with the same client.
+              ☛ Front-end web development calls to all my passions; it
+              incorporates creativity and problem solving and I'm allowed to
+              break it to improve the code (in a seperate git branch, of
+              course). <br />☛ I love applying responsive design principles and
+              watching my web pages shrink into mobile screens and still look
+              amazing. <br />☛ My specialties includes quickly learning new
+              skills and languages, problem solving, responsive design and
+              website optimization. So far, I have Java, JavaScript, React,
+              NoSQL, MongoDB, HTML, CSS, Node.JS, GraphQL, Apollo Server, Apollo
+              Client, ExpressJS. I'm still enthusiastically grabbing into the
+              learning from challenges, frameworks or principles I can integrate
+              into the coding web in my head. <br />☛ Also, checkout my side
+              projects down below that I have worked on.
             </Typography>
 
             <div>
@@ -94,7 +101,7 @@ const AboutMe = (props) => {
                 size="large"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/11XrL7DnzhD_vqU73Q5Z1vo2K4dwXTX_0/view?usp=sharing"
+                    "https://drive.google.com/file/d/1n5neVFgg016oyIq2N6BTKgd5HoMCKz-U/view?usp=sharing"
                   )
                 }
               >
