@@ -1,26 +1,26 @@
-import React, { Fragment, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Clear } from '@material-ui/icons';
-import { Button, Divider, IconButton } from '@material-ui/core';
-import ContactMeForm from './ContactMeForm';
+import React, { Fragment, useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Clear } from "@material-ui/icons";
+import { Button, Divider, IconButton } from "@material-ui/core";
+import ContactMeForm from "./ContactMeForm";
 
 const useStyles = makeStyles((theme) => ({
   mobileButtonContainer: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   mobileButton: {
     fontFamily: '"Mada", sans-serif',
-    fontStyle: 'normal',
+    fontStyle: "normal",
     fontWeight: 500,
     fontSize: 16,
-    lineHeight: '53px',
+    lineHeight: "53px",
   },
   buttonBottomNav: {
-    margin: '8px 10px 0px 10px',
+    margin: "8px 10px 0px 10px",
   },
   icon2: {
-    height: '45px',
-    width: '55px',
+    height: "45px",
+    width: "55px",
   },
 }));
 
@@ -35,9 +35,9 @@ const MobileNavMenu = ({
     <Fragment>
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <IconButton
@@ -49,7 +49,7 @@ const MobileNavMenu = ({
       <Divider />
       <div>
         <div className={classes.mobileButtonContainer}>
-          <Button
+          {/* <Button
             className={classes.mobileButton}
             onClick={() => {
               setMobileOverlay((mobileOverlay) => !mobileOverlay);
@@ -57,7 +57,7 @@ const MobileNavMenu = ({
             }}
           >
             Skills
-          </Button>
+          </Button> */}
 
           <div className={classes.mobileButtonContainer}>
             <Button

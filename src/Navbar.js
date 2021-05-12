@@ -230,12 +230,12 @@ const NewNavbar = (props) => {
                 Projects
               </Button>
 
-              <Button
+              {/* <Button
                 className={trans ? classes.transButton : classes.button}
                 onClick={props.scrollToSkills}
               >
                 Skills
-              </Button>
+              </Button> */}
               <Button
                 className={trans ? classes.transButton : classes.button}
                 onClick={() => setOpen(true)}

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Manrope", sans-serif',
     color: "#260859",
     fontSize: "20px",
-    lineHeight: "30px",
+    lineHeight: "32px",
     justifyContent: "center",
     width: "80%",
     textAlign: "center",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
       width: "60%",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "50%",
+      width: "70%",
     },
   },
 
@@ -78,22 +78,23 @@ const AboutMe = (props) => {
           <div className={classes.aboutMeBody}>
             <Typography className={classes.title}>Hello! I'm Aruni</Typography>
             <Typography className={classes.aboutme}>
-              ☛ Front-end web development calls to all my passions; it
+              Front-end web development calls to all my passions; it
               incorporates creativity and problem solving and I'm allowed to
               break it to improve the code (in a seperate git branch, of
-              course). <br />☛ I love applying responsive design principles and
-              watching my web pages shrink into mobile screens and still look
-              amazing. <br />☛ My specialties includes quickly learning new
-              skills and languages, problem solving, responsive design and
-              website optimization. So far, I have Java, JavaScript, React,
-              NoSQL, MongoDB, HTML, CSS, Node.JS, GraphQL, Apollo Server, Apollo
+              course). I love applying responsive design principles and watching
+              my web pages shrink into mobile screens and still look amazing.{" "}
+              <br />
+              <br /> My specialties includes quickly learning new skills and
+              languages, problem solving, responsive design and website
+              optimization. So far, I have Java, JavaScript, React, NoSQL,
+              MongoDB, HTML, CSS, Node.JS, GraphQL, Apollo Server, Apollo
               Client, ExpressJS. I'm still enthusiastically grabbing into the
               learning from challenges, frameworks or principles I can integrate
-              into the coding web in my head. <br />☛ Also, checkout my side
+              into the coding web in my head. <br /> Also, checkout my side
               projects down below that I have worked on.
             </Typography>
 
-            <div>
+            {/* <div>
               <Button
                 variant="outlined"
                 startIcon={<GetAppIcon />}
@@ -107,7 +108,7 @@ const AboutMe = (props) => {
               >
                 Resume
               </Button>
-            </div>
+            </div> */}
           </div>
         </Grid>
       </Grid>

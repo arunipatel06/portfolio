@@ -20,8 +20,8 @@ const HomePage = (props) => {
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
   const resourcesRef = useRef(null);
   const scrollToResources = () => scrollToRef(resourcesRef);
-  const skillsRef = useRef(null);
-  const scrollToSkills = () => scrollToRef(skillsRef);
+  // const skillsRef = useRef(null);
+  // const scrollToSkills = () => scrollToRef(skillsRef);
   const projectsRef = useRef(null);
   const scrollToProjects = () => scrollToRef(projectsRef);
 
@@ -33,7 +33,7 @@ const HomePage = (props) => {
     <div className={classes.root}>
       <NewNavbar
         scrollToResources={scrollToResources}
-        scrollToSkills={scrollToSkills}
+        // scrollToSkills={scrollToSkills}
         scrollToTop={scrollToTop}
         scrollToProjects={scrollToProjects}
       />
@@ -88,9 +88,9 @@ const HomePage = (props) => {
       <div ref={projectsRef}>
         <Projects />
       </div>
-      <div ref={skillsRef}>
+      {/* <div ref={skillsRef}>
         <Skills />
-      </div>
+      </div> */}
       <div>
         <Footer />
       </div>
